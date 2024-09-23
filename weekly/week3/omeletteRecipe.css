@@ -1,0 +1,118 @@
+@font-face  
+{ 
+    font-family: "Young-Serif"; 
+    src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf"); 
+}
+
+@font-face  
+{ 
+    font-family: "Outfit"; 
+    src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf"); 
+}
+
+body 
+{ 
+    font-family: "Outfit"; 
+    background-color: hsl(30, 54%, 90%);
+    font-size: 16px;
+    font-weight: normal;
+    color: #666666;
+}
+
+h1, h2
+{
+    font-family: "Young-Serif";
+    color: #333333;
+}
+
+li 
+{
+    padding: 0.4em;
+    padding-left: 1em;
+}
+
+div.separatorLine
+{
+    background-color: #ccc;
+    height: 1px;
+    margin-top: 2em;
+    margin-bottom: 2em;     
+}
+
+.recipe-container{
+    background-color: hsl(0, 0%, 100%); 
+    border-radius: 2em;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    padding: 4em;       
+    margin: 5em;
+    
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe-container h2 
+{
+    color: hsl(14, 45%, 36%);
+}
+
+.recipe-container li::marker 
+{
+    color: hsl(14, 45%, 36%);
+}
+
+.recipe-image
+{
+    border-radius: 1em;
+}
+
+.prep-time 
+{
+    background-color:hsl(330, 100%, 98%);
+    padding: 1.5em;
+    border-radius: 1em;
+}
+
+.prep-time h3 
+{
+    color: hsl(332, 51%, 32%);
+}
+
+.prep-time li::marker 
+{
+    color: hsl(332, 51%, 32%);
+}
+
+.nutrition-table 
+{
+    width: 100%;
+    text-align: left;
+}
+
+.nutrition-table td
+{
+    font-weight: bolder;
+    color: hsl(14, 45%, 36%);
+}
+
+.nutrition-table th
+{
+    font-weight: normal;
+}
+
+.nutrition-table td, th
+{
+    border-bottom: 1px solid #ccc;
+}
+
+.nutrition-table tr
+{
+    border-bottom: 1px solid #ccc;
+}
+
+.nutrition-table tr.lastTableRow
+{
+    border-bottom: none;
+}
