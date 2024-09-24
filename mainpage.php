@@ -50,6 +50,7 @@
                     <h3>week 4</h3>
                     <ul>
                         <li><a href="weekly/week4/AISocialMedia.php">AI Social Media</a></li>
+                        <li><a href="weekly/week4/miniTasks.php">Mini tasks</a></li>
                     </ul>
                 </li>
             </ul>
