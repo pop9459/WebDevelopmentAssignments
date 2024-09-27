@@ -125,6 +125,122 @@
     <h2>Looking for numbers 9, 26, 14, 2</h2>
     <?php containsNumbers($areaCodes, array(9, 26, 14, 2)); ?>
 
+    <?php
+        function printSquare($width, $height)
+        {
+            echo "<td>";
+            for ($i = 0; $i < $height; $i++)
+            {
+                for ($j = 0; $j < $width; $j++)
+                {
+                    echo "* ";
+                }
+                echo "<br>";
+            }   
+            echo "</td>";
+        }
+
+        function printTriangle($height)
+        {
+            echo "<td>";
+            for($i = 1; $i <= $height; $i++)
+            {
+                for($j = 0; $j < $i; $j++)
+                {
+                    echo "* ";
+                }
+                echo "<br>";
+            }
+            echo "</td>";
+        }
+        
+        function printTriangleReverse($height)
+        {
+            echo "<td>";
+            for($i = $height; $i > 0 ; $i--)
+            {
+                for($j = 0; $j < $i; $j++)
+                {
+                    echo "* ";
+                }
+                echo "<br>";
+            }
+            echo "</td>";
+        }
+        
+        function pyramid($height)
+        {
+            echo "<td>";            
+            for($i = 0; $i <= $height; $i++)
+            {
+                for($j = 0; $j < ($height*2-(1+$i*2))/2; $j++)
+                {
+                    echo "__";
+                }
+                for($j = 0; $j < 1+$i*2; $j++)
+                {
+                    echo "*_";
+                }
+                for($j = 0; $j < ($height*2-(1+$i*2))/2; $j++)
+                {
+                    echo "__";
+                }
+                echo "<br>";
+            }
+            echo "</td>";
+        }
+
+        function pyramidReverse($height)
+        {
+            echo "<td>";            
+            for($i = $height; $i >= 0; $i--)
+            {
+                for($j = 0; $j < ($height*2-(1+$i*2))/2; $j++)
+                {
+                    echo "__";
+                }
+                for($j = 0; $j < 1+$i*2; $j++)
+                {
+                    echo "*_";
+                }
+                for($j = 0; $j < ($height*2-(1+$i*2))/2; $j++)
+                {
+                    echo "__";
+                }
+                echo "<br>";
+            }
+            echo "</td>";
+        }
+
+        function fibonacciSeq($length)
+        {
+            $seq = array(0, 1);
+
+            while(count($seq) < $length)
+            {
+                array_push($seq, $seq[count($seq)-1] + $seq[count($seq)-2]);
+            }
+            foreach($seq as $num)
+            {
+                echo "$num ";
+            }
+        }
+    ?>
+    
+    <h1>Task 3a</h1>
+    <table>
+        <?php printSquare(10, 1); ?>
+        <?php printSquare(10, 4); ?>
+        <?php printTriangle(10); ?>
+        <?php printTriangleReverse(10); ?>
+    </table>
+    <h1>Task 3b</h1>
+    <table>
+        <?php pyramid(9); ?>
+        <?php pyramidReverse(9); ?>
+    </table>
+    <h1>Task 3c</h1>
+        <?php fibonacciSeq(30); ?>
     <hr>
     <a href="../../mainpage.php">go to mainpage</a>
 </body>
