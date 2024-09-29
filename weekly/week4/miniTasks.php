@@ -241,8 +241,7 @@
     </table>
     <h1>Task 3c</h1>
         <?php fibonacciSeq(30); ?>
+        
     <hr>
     <a href="../../mainpage.php">go to mainpage</a>
 </body>
-
-</html>
