@@ -60,6 +60,7 @@
             <h2>Portfolio Assignments</h2>
             <ul>
                 <li><a href="../portfolioWebsite/index.php">portfolio website</a></li>
+                <li><a href="../IT1G-Website/index.php">period 1 project - sunny</a></li>
             </ul>
         </div>      
 
