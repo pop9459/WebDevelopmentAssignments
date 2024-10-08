@@ -53,6 +53,12 @@
                         <li><a href="weekly/week4/miniTasks.php">Mini tasks</a></li>
                     </ul>
                 </li>
+                <li>
+                    <h3>week 6</h3>
+                    <ul>
+                        <li><a href="weekly/week6/form.php">Form</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
