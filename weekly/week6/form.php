@@ -1,3 +1,17 @@
+<?php
+    $fname = filter_input(INPUT_POST, "fname");
+    $lname = filter_input(INPUT_POST, "lname");
+    $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);    
+
+    $options = filter_input(INPUT_POST, "option", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+    $billing = filter_input(INPUT_POST, "billing");
+    $insurance = filter_input(INPUT_POST, "abroad");
+    
+    echo $billing;
+    echo $insurance;
+    var_dump($_POST);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +25,7 @@
         <h1>Health Insurance</h1>
         <hr>
 
-        <form action="mylittleformy.html" method="POST">
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
             <label for="fname">First Name:</label>
             <input type="text" name="fname" id="fname">
             <label for="lname">Last Name:</label>
@@ -22,42 +36,42 @@
             <p class="nomargin">Additional options:</p>
             <div>
                 <label for="physio">Physio</label>
-                <input type="checkbox" name="physio" id="physio">
+                <input type="checkbox" name="option[]" id="physio" value="physio">
                 <label for="dental">Dental</label>
-                <input type="checkbox" name="dental" id="dental">
+                <input type="checkbox" name="option[]" id="dental" value="dental">
                 <label for="crystal">Healing Crystals</label>
-                <input type="checkbox" name="crystal" id="crystal">
+                <input type="checkbox" name="option[]" id="crystal" value="crystal">
                 <label for="tarot">Tarot Reading</label>
-                <input type="checkbox" name="tarot" id="tarot">
+                <input type="checkbox" name="option[]" id="tarot" value="tarot">
             </div>
 
             <label for="billing">Billing:</label>
-             <select name="billing" id="billing">
-                <option value="email">Email</option>
-                <option value="fax">Fax</option>
-                <option value="pigeon">Carrier pigeon</option>
-             </select>
+            <select name="billing" id="billing">
+            <option value="email">Email</option>
+            <option value="fax">Fax</option>
+            <option value="pigeon">Carrier pigeon</option>
+            </select>
 
-             <p class="nomargin">Insurance abroad?</p>
-             <div class="flexradio">
-                <span>
-                    <input type="radio" name="abroad" id="y">
-                    <label for="y">Yes</label>
-                </span>
-                <span>
-                    <input type="radio" name="abroad" id="n">
-                    <label for="n">No</label>
-                </span>
-                <span>
-                    <input type="radio" name="abroad" id="m">
-                    <label for="m">Maybe</label>
-                </span>
-             </div>
+            <p class="nomargin">Insurance abroad?</p>
+            <div class="flexradio">
+            <span>
+                <input type="radio" name="abroad" id="y" value="yes">
+                <label for="y">Yes</label>
+            </span>
+            <span>
+                <input type="radio" name="abroad" id="n" value="no">
+                <label for="n">No</label>
+            </span>
+            <span>
+                <input type="radio" name="abroad" id="m" value="maybe">
+                <label for="m">Maybe</label>
+            </span>
+            </div>
 
-             <div>
-                <input type="submit" value="Send Info">
-                <input type="reset" value="Reset Form">
-             </div>
+            <div>
+            <input type="submit" value="Send Info">
+            <input type="reset" value="Reset Form">
+            </div>
         </form>
     </div>
 </body>
