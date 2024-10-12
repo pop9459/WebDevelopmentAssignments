@@ -56,7 +56,8 @@
                 <li>
                     <h3>week 6</h3>
                     <ul>
-                        <li><a href="weekly/week6/form.php">Form</a></li>
+                    <li><a href="weekly/week6/form.php">Form</a></li>
+                    <li><a href="weekly/week6/assignmentForm.php">Assignment Form</a></li>
                     </ul>
                 </li>
             </ul>
