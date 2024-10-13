@@ -1,5 +1,45 @@
 <?php
 
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        //get the form data
+        $fname = filter_input(INPUT_POST, 'fName');
+        $lname = filter_input(INPUT_POST, 'lName');
+        $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        $areaCode = filter_input(INPUT_POST, 'areaCode');
+        $phone = filter_input(INPUT_POST, 'phone');
+        $company = filter_input(INPUT_POST, 'company');
+        $address = filter_input(INPUT_POST, 'address');
+        $addressL2 = filter_input(INPUT_POST, 'addressL2');
+        $city = filter_input(INPUT_POST, 'city');
+        $state = filter_input(INPUT_POST, 'state');
+        $zip = filter_input(INPUT_POST, 'zip');
+        $website = filter_input(INPUT_POST, 'website');
+        $subjects = filter_input(INPUT_POST, 'subjects', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+        $billing = filter_input(INPUT_POST, 'billing');
+        
+        $errors = [];
+        //check if all fields are filled
+        empty($fname) ? array_push($errors, "First name is required") : "";
+        empty($lname) ? array_push($errors, "Last name is required") : "";
+        empty($email) ? array_push($errors, "Email is required") : "";
+        empty($areaCode) ? array_push($errors, "Area code is required") : "";
+        empty($phone) ? array_push($errors, "Phone number is required") : "";
+        empty($company) ? array_push($errors, "Company name is required") : "";
+        empty($address) ? array_push($errors, "Address is required") : "";
+        empty($addressL2) ? array_push($errors, "Address Line 2 is required") : "";
+        empty($city) ? array_push($errors, "City is required") : "";
+        empty($state) ? array_push($errors, "State is required") : "";
+        empty($zip) ? array_push($errors, "Zip code is required") : "";
+        empty($website) ? array_push($errors, "Website is required") : "";
+        empty($subjects) ? array_push($errors, "At least one subject is required") : "";
+        empty($billing) ? array_push($errors, "Billing is required") : "";
+        
+        //check if email is valid
+        if($email === false) array_push($errors, "Email is invalid");
+
+        var_dump($errors);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +52,29 @@
 </head>
 <body>
     <div class=formContainer>
+        
+        <div id="formOutput">
+            <?php
+                if(count($errors) > 0) {
+                    echo "<div class='errorBox'>";
+                    echo "<ul>";
+                    foreach($errors as $error) {
+                        echo "<li>$error</li>";
+                    }
+                    echo "</ul>";
+                }
+                else {
+                    echo "<div class='successBox'>";
+                    echo "<p>Form submitted successfully</p>";
+                }
+                echo "</div>";
+                ?>
+        </div>
+        
         <h1>Webinar Subscription</h1>
         <hr>
+        
         <form action=<?php echo $_SERVER["PHP_SELF"]; ?> method="POST">
-            
             <h3>Name</h3>
             <div class="formSection inRow">
                 <div class="inColumn">
