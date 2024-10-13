@@ -20,25 +20,43 @@
         
         $errors = [];
         //check if all fields are filled
-        empty($fname) ? array_push($errors, "First name is required") : "";
-        empty($lname) ? array_push($errors, "Last name is required") : "";
-        empty($email) ? array_push($errors, "Email is required") : "";
-        empty($areaCode) ? array_push($errors, "Area code is required") : "";
-        empty($phone) ? array_push($errors, "Phone number is required") : "";
-        empty($company) ? array_push($errors, "Company name is required") : "";
-        empty($address) ? array_push($errors, "Address is required") : "";
-        empty($addressL2) ? array_push($errors, "Address Line 2 is required") : "";
-        empty($city) ? array_push($errors, "City is required") : "";
-        empty($state) ? array_push($errors, "State is required") : "";
-        empty($zip) ? array_push($errors, "Zip code is required") : "";
-        empty($website) ? array_push($errors, "Website is required") : "";
-        empty($subjects) ? array_push($errors, "At least one subject is required") : "";
-        empty($billing) ? array_push($errors, "Billing is required") : "";
-        
-        //check if email is valid
-        if($email === false) array_push($errors, "Email is invalid");
+        if (empty($fname) || 
+            empty($lname) || 
+            empty($email) || 
+            empty($areaCode) || 
+            empty($phone) || 
+            empty($company) || 
+            empty($address) || 
+            empty($city) || 
+            empty($state) || 
+            empty($zip) || 
+            empty($website) || 
+            empty($subjects) || 
+            empty($billing)) 
+        {
+            array_push($errors, "All fields are required");
+        }
 
-        var_dump($errors);
+        //check if names are valid
+        if(strlen($fname) < 5 || strlen($lname) < 5) 
+        {
+            array_push($errors, "Name is too short");
+        }
+
+        if(strtolower($fname) == $fname || strtolower($lname) == $lname) 
+        {
+            array_push($errors, "Names must contain at least one uppercase letter");
+        }
+
+        //check if email is valid
+        if($email === false || 
+            explode('.', $email)[1] != "eu"
+        )
+        {
+            array_push($errors, "Email is invalid");
+        }
+            
+        if(empty($addressL2)) $addressL2 = $address;
     }
 ?>
 
