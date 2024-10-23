@@ -78,6 +78,7 @@
                 <li><a href="extra/conditions.php">conditions class work</a></li>
                 <li><a href="extra/sunnysideDemo/index.html">sunnyside demo</a></li>
                 <li><a href="extra/GeekabooPracticeExam/index.php">Geekaboo Practice Exam</a></li>
+                <li><a href="extra/Spotify/index.php">Spotify</a></li>
             </ul>
         </div>
     </div>
