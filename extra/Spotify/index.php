@@ -32,7 +32,7 @@
                 <div class="items">
                     <?php for($i = 0; $i < 6; $i++) {
                         echo '<div class="contentTile artist">';
-                        echo '<div class=img></div>';
+                        echo '<img class=img src="resources/DavidGuetta.jpg" alt="artistImg"></img>';
                         echo '<h5>Coldplay</h5>';
                         echo '<p>artist</p>';
                         echo ' </div>';
@@ -48,7 +48,7 @@
                 <div class="items">
                     <?php for($i = 0; $i < 6; $i++) {
                         echo '<div class="contentTile">';
-                        echo '<div class=img></div>';
+                        echo '<img class=img src="resources/SabrinaCarpenter.jpg" alt="artistImg"></img>';
                         echo '<h5>Album name</h5>';
                         echo '<p>artist</p>';
                         echo ' </div>';
