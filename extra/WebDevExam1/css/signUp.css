@@ -1,0 +1,40 @@
+main.signUpMain
+{
+    grid-template-columns: 1fr 1fr;
+}
+
+main .gridHeader.mainHeader
+{
+    grid-column: 1/3;
+}
+
+main.signUpMain form .inLine
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+main.signUpMain form .fullWidth
+{
+    grid-column: 1/3;
+}
+
+main.signUpMain form
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    padding: 2rem;
+    gap: 1rem;
+}
+
+main.signUpMain form input
+{
+    width: 100%;
+}
+
+main.signUpMain form input[type="radio"],
+main.signUpMain form input[type="checkbox"]
+{
+    width: min-content;
+}
