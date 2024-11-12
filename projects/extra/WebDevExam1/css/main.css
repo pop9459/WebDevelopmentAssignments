@@ -1,0 +1,172 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    --backgroundColor: #FCF9F7;
+    --grayBars: #E9E9E9;
+    --colorOrange: #FF8F38;
+    --colorRed: #F73A40;
+    --extremePricesColor: #E9E9E9;
+    --pageWidth: 1200px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #000000;
+
+    background-color: white;
+}
+
+#background
+{
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    background-color: var(--backgroundColor);
+}
+
+#page
+{
+    margin: auto;
+
+    width: var(--pageWidth);
+    min-height: 100vh;
+
+    background-color: white;
+}
+
+a:hover
+{
+    color: var(--colorOrange);
+}
+
+/* HEADER */
+
+header
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    place-items: center;
+}
+
+header .logoSection
+{
+    place-self: start;
+    width: 225px;
+}
+
+header .logoSection img
+{
+    max-width: 100%;
+    height: 100%;
+}
+
+header .logoSection p
+{
+    color: var(--extremePricesColor);
+    text-align: center;
+}
+
+header .searchBar input
+{
+    width: 575px;
+    height: 1.75rem;
+}
+
+header nav
+{
+    place-self: end;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+header nav a
+{
+    margin: 0 0.25rem;
+    text-decoration: none;
+    color: var(--colorRed);
+}
+
+/* CONTENT */
+
+main
+{
+    display: grid;
+    grid-template-columns: 225px 975px;
+}
+
+main ul li
+{
+    margin: 0.5rem;
+    list-style: none;
+}
+
+main ul li a
+{
+    color:  var(--colorRed);
+    text-decoration: none;
+}
+
+main .gridHeader
+{
+    padding: 0.5rem;
+    color: var(--colorOrange);
+    background-color: var(--grayBars);
+}
+
+main .flashDeals
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main .flashDeals .productTile
+{
+    text-align: center;
+    width: 325px;
+    height: 270px;
+}
+
+/* FOOTER */
+
+footer
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: var(--pageWidth);
+    background-color: var(--grayBars);
+    text-align: center;
+}
+
+footer h2
+{
+    color: var(--colorOrange);
+}
+
+footer a
+{
+    color: var(--colorRed);
+}
+
+/* FORM RESPONSE */
+
+.userInfo span
+{
+    font-weight: bold;
+}
+
+.formError
+{
+    color: var(--colorRed);
+}
