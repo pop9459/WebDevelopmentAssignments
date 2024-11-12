@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;  
+    font-size: 18px;
+    font-weight: 400;  
+    font-style: normal;
+
+    background-color: rgb(246, 246, 246);
+}
+
+.widgetContainer
+{
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    grid-template-rows: 25rem 20rem 20rem;
+    gap: 2rem;
+    
+    margin: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.widget
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: 1.5rem;
+    padding: 2rem;
+
+    overflow: hidden;
+}
+
+
+.widget h1 
+{
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+.widget h2
+{
+    font-weight: 500;
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+}
+
+.widget h3
+{
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+}
+
+.widget img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.widget p
+{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.widgetContainer div
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.left
+{
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+.flexColumn
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexColumn div
+{
+    height: 100%;
+}
+
+.flexRow
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#createPost
+{
+    background-color: hsl(31, 66%, 93%);
+}
+#createPost span 
+{
+    color: hsl(256, 67%, 59%);
+}
+
+#mainWidget
+{
+    background-color: hsl(256, 67%, 59%);
+    color: hsl(0, 0%, 100%);
+    grid-column: 2/4;
+    gap: 0;
+}
+#mainWidget span
+{
+    color: hsl(39, 100%, 71%);
+}
+#mainWidget img
+{
+    max-width: 35%;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#scheduleToSocialMedia
+{
+    background-color: hsl(254, 88%, 90%);
+    grid-column: 4/5;
+    grid-row: 1/3;
+    align-items: start;
+}
+#scheduleToSocialMedia img
+{
+    max-width: 180%;
+}
+
+#writeUsingAI
+{
+    background-color: hsl(39, 100%, 71%);
+    justify-content: space-around;
+}
+
+#audienceGrowth
+{
+    background-color: hsl(0, 0%, 100%);
+    align-items:start;
+}
+
+#manageMultipleAccounts
+{
+    align-items: start;
+    background-color: hsl(0, 0%, 100%);
+}
+#manageMultipleAccounts img
+{
+    max-width: 154%;
+}
+
+#maintainSchedule
+{
+    background-color: hsl(39, 100%, 71%);
+    justify-content: start;
+}
+
+#growFollowers
+{
+    background-color: hsl(256, 67%, 59%);
+    color: hsl(0, 0%, 100%);
+    
+    display: flex;
+    flex-direction: row;
+
+    grid-column: 3/5;
+}

@@ -1,0 +1,45 @@
+*
+{
+    box-sizing: content-box;
+}
+
+body
+{
+    margin:0px;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    min-height:100dvh;
+    
+}
+
+#container
+{
+    grid-column: 2/3;
+    background-color: forestgreen;
+    border-radius:15px;
+    margin: 20px 0; 
+    padding: 0 1rem;
+}
+
+form
+{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    row-gap:.25rem;
+}
+
+input[type=text], select
+{
+    max-width:200px;
+}
+
+.nomargin
+{
+    margin:0;
+}
+
+.flexradio
+{
+    display:flex;
+    flex-direction: column;
+}

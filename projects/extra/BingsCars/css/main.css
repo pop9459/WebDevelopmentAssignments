@@ -1,0 +1,209 @@
+/* RESET */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --headerColor: #31485E;
+    --footerColor: #bdc3c7;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    min-height: 100vh;
+
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 1em;
+    color: black;
+    
+    background-color: lightgray;
+}
+
+/* MAIN */
+
+#page
+{
+    width: 1024px;
+    margin-top: 1rem;
+
+    background-color: white;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2.5rem;
+}
+
+/* HEADER */
+
+#header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 115px;
+    padding: 1.25rem;
+
+    background-color: var(--headerColor);
+}
+
+#header img
+{
+    max-width: 100%;
+    height: 100%;
+}
+
+#header nav
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+#header nav a
+{
+    all: unset;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+    
+    font-weight: bold;
+    color: white;
+}
+
+#header nav a:hover
+{
+    background-color: white;
+    color: var(--headerColor);
+}
+
+/* HERO */
+
+.hero
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    color: white;
+    background-image: url("../assets/header.png");
+    padding: 3.25rem 0;
+}
+
+/* CAR SHOWCASE */
+
+.showcase .carsList
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main h1
+{
+    color: var(--headerColor);
+}
+
+.showcase .carsList .carTile
+{
+    list-style: none;
+    border: 1px solid lightgray;
+    width: 222px;
+    padding: 10px;
+    margin: 0.75rem 0;
+    border-radius: 10px;
+}
+
+.showcase .carsList .carTile img
+{
+    width: 100%;
+    max-height: 100%;
+}
+
+/* FOOTER */
+
+footer
+{
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    background-color: var(--footerColor);
+
+    padding: 3rem;
+}
+
+footer p
+{
+    margin: 0.5rem 0;
+    color: white;
+}
+
+footer a
+{
+    color: black;
+}
+
+footer .openingHours
+{
+    grid-column: 2/3;
+    text-align: end;
+}
+
+/* CONTACT FORM */
+
+main #contactForm
+{
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+}
+
+main #contactForm .inLine
+{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+} 
+
+main #contactForm *
+{
+    grid-column: 1/3;
+    background-color: white;
+}
+
+main #contactForm input
+{
+    height: 2rem;
+    margin-bottom: 1rem;
+    border: 1px solid lightgray;
+}
+
+main #contactForm input[type="textarea"]
+{
+    height: 5rem;
+}
+
+main #contactForm select 
+{
+    width: 100%;
+    height: 2rem;
+    border: 1px solid lightgray;
+    margin-bottom: 1rem;
+}
+
+main #contactForm input[type="submit"]
+{
+    width: fit-content;
+    background-color: green;
+    color: white;
+    padding: 0 0.5rem;
+}

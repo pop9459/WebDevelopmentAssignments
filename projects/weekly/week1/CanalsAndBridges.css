@@ -1,0 +1,42 @@
+.image {
+    border: 3px solid blue;
+}
+
+.listImage {
+    max-width: 120px;
+    margin-top: 15px;
+}
+
+.bridgeListImage {
+    border: 3px solid;
+    border-color: blue;
+    max-width: 120px;
+    margin-top: 15px;
+}
+
+.listTitle {
+    margin-top: 0;
+}
+
+.listHeader {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+#maderburgImg {
+    width: 150px;
+}
+
+#header {
+    color: blue;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#subHeader {
+    color: red;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;    
+}

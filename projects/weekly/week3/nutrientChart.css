@@ -1,0 +1,11 @@
+table 
+{
+    max-width: 50%;
+    text-align: left;
+    margin: 20px;
+}
+
+td, th {
+    border: 1px solid #666;
+    min-width: 25%;
+}

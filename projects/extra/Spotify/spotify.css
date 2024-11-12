@@ -1,0 +1,217 @@
+/* RESET */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: monospace;
+    font-size: 18px;
+    color: #656565;
+    background-color: #000000;
+    /* background-color: white; */
+
+    --smallGap: 0.5rem;
+}
+
+h1, h2, h3, h4, h5
+{
+    font-weight: 600;
+}
+
+p, a
+{
+    font-weight: normal;
+}
+
+input
+{
+    /* all: unset; */
+}
+
+/* GENERAL */
+
+.button
+{
+    padding: 0.75rem 1.5rem;
+    background-color: white;
+    border-radius: 15rem;
+}
+
+.inLine
+{
+    display: flex;
+    flex-direction: row;
+    gap: var(--smallGap);
+}
+
+/* HEADER */
+
+#header
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 100%;
+    padding: var(--smallGap);
+    padding-left: 2rem;
+}
+
+.spotifyLogo
+{
+    background-color: white;
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+}
+
+.button.home
+{
+    width: 48px;
+    height: 48px;
+    padding: 0;    
+    background-color: #1E1E1E;
+}
+
+.searchBar
+{
+    width: 28vw;
+    height: 48px;
+    border-radius: 15rem;
+    padding: 0;    
+    background-color: #1E1E1E;
+}
+
+.account
+{
+    place-self: end;
+}
+
+/* MAIN */
+
+main
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: var(--smallGap);
+}
+
+main > div
+{
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+img
+{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* SIDEBAR */
+
+#sidebar
+{
+    background-color: #111111;
+    height: 100%;
+}
+
+/* AD BANNER */
+
+#adBanner
+{
+    /* temp */
+    height: 4rem;
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* margin: var(--smallGap); */
+
+    background-image: linear-gradient(90deg,#af2896,#509bf5);
+}
+
+/* CONTENT */
+
+#content
+{
+    background-color: lightgrey;
+}
+
+#content
+{
+    /* background-color: #212121; */
+    background-image: linear-gradient(#222222,#121212);
+    color: white;
+}
+
+#content .showcase
+{
+    margin: 1rem 0;
+}
+
+#content .img
+{
+    aspect-ratio: 1/1;
+}
+
+#content .items
+{
+    display: flex;
+    flex-direction: row;
+}
+
+#content .contentTile
+{
+    padding: 0.75rem;
+    width: 12.5rem;
+    height: 18rem;
+}
+
+#content .contentTile .img
+{
+    border-radius: 0.5rem;
+}
+
+#content .contentTile.artist .img
+{
+    border-radius: 20rem;
+}
+
+/* FORM */
+#form h1
+{
+    text-align: center;
+}
+
+#form form
+{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+}
+
+#form form input
+{
+    justify-self: start;
+    width: 100%;
+}
+
+#form form input[type="submit"]
+{
+    grid-column: span 2;
+}
+
+#form form div.inLine
+{
+    justify-content: space-between;
+    grid-column: span 2;
+}

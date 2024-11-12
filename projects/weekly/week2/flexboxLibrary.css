@@ -1,0 +1,28 @@
+#flexboxContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+.flexboxItem {
+    background-color: lightgrey;
+    aspect-ratio: 1/1;
+    min-height: 150px;
+    width: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridItem {
+    background-color: lightgrey;
+
+    text-align: center;
+}
