@@ -70,10 +70,17 @@
     <title>Week1P2</title>
 </head>
 <body>
+    <!-- ASSIGNMENT 1 -->
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
         <?php printCitySelector("city1"); ?>
         <?php printCitySelector("city2"); ?>
         <input type="submit">
+    </form>
+
+    <hr>
+    <!-- ASSIGNMENT 2 -->
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+        <input type="text" name="name" id="name">
     </form>
 </body>
 </html>
