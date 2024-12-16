@@ -14,7 +14,7 @@ if ($_FILES["uploadedFile"]["error"] == 0)
         
         $fileinfo = finfo_open(FILEINFO_MIME_TYPE);
         $uploadedFileType = finfo_file($fileinfo, $_FILES["uploadedFile"]["tmp_name"]);
-		var_dump($uploadedFileType);
+        var_dump($uploadedFileType);
 
         //A shorter version of line 13 - 14
         //$uploadedFileType = finfo_file(finfo_open(FILEINFO_MIME_TYPE), $_FILES["uploadedFile"]["tmp_name"]);

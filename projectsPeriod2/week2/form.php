@@ -11,7 +11,7 @@
 			<p><img src="img/Logo.jpg" alt="Logo of The bay of Pirates" id="logo"></p>
 			
 			<!--ENCTYPE-->
-			<form action="uploadfiles2.php" method="post" enctype="multipart/form-data">
+			<form action="uploadfiles3.php" method="post" enctype="multipart/form-data">
 				<label for="file">Filename:</label>
 				<input type="file" name="uploadedFile" id="file" />
 				
